@@ -1,10 +1,15 @@
-#test.py
+#flask_api.py
 
 import flask
 import flask_cors
+from chatydapi import ChaTYDAPI
 
+#learn RESTAPI
+#add a timeout system
+
+aqua = ChaTYDAPI()
 app = flask.Flask("ChaTYD-Backend")
-flask_cors.CORS(app, origins = ["https://yknottyd.github.io/DNSTest2"])
+flask_cors.CORS(app, origins = ["https://yknottyd.github.io/ChaTYD-Frontend"])
 
 @app.route("/api", methods=["POST"])
 def process_request():
@@ -17,11 +22,11 @@ def process_request():
     match request["request"]:
 
         case "ask":
-            pass
+            pass;
         case _:
             return "Invalid request.";
 
-    return f"None."
+    return aqua.dflt_err_msg();
 
 if __name__ == "__main__":
 
