@@ -4,7 +4,7 @@ import flask
 import flask_cors
 
 app = flask.Flask("TESTAPI")
-flask_cors.CORS(app)#, origins = ["https://yknottyd.github.io/DNSTest2"])
+flask_cors.CORS(app, origins = ["https://yknottyd.github.io/DNSTest2"])
 
 @app.route("/api", methods=["POST"])
 def process_request():
