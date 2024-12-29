@@ -3,7 +3,7 @@
 import flask
 import flask_cors
 
-app = flask.Flask("TESTAPI")
+app = flask.Flask("ChaTYD-Backend")
 flask_cors.CORS(app, origins = ["https://yknottyd.github.io/DNSTest2"])
 
 @app.route("/api", methods=["POST"])
