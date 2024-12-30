@@ -1,5 +1,7 @@
 #api.py
 
+pass
+
 class ChaTYDAPI:
 
     def __init__(self):

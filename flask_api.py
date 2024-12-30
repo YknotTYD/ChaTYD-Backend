@@ -7,14 +7,16 @@ from chatydapi import ChaTYDAPI
 #learn RESTAPI
 #add a timeout system
 
-aqua = ChaTYDAPI()
-app = flask.Flask("ChaTYD-Backend")
-flask_cors.CORS(app, origins = ["https://yknottyd.github.io/ChaTYD-Frontend"])
+pass
+
+aqua = ChaTYDAPI();
+app = flask.Flask("ChaTYD-Backend");
+flask_cors.CORS(app, origins = ["https://yknottyd.github.io/ChaTYD-Frontend"]);
 
 @app.route("/api", methods=["POST"])
 def process_request():
 
-    request = flask.request.json
+    request = flask.request.json;
 
     if "request" not in request:
         return "Invalid request.";
@@ -28,13 +30,13 @@ def process_request():
 
     return aqua.dflt_err_msg();
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
-    print("Running on app.run.")
+    print("Running on app.run.");
 
     app.run(
         host="0.0.0.0",
         ssl_context=("cert.pem", "key.pem"),
         debug=False,
         port=443
-    )
+    );
